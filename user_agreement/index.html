@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Closely — User Agreement and Privacy Policy</title>
+    <title>Closely — Пользовательское соглашение и Политика конфиденциальности</title>
 
     <style>
         body { font-family: Arial, sans-serif; line-height: 1.6; margin: 20px; }
@@ -15,6 +15,7 @@
         section { margin-bottom: 40px; }
         .language-list li {margin-bottom: 10px;}
         .block {margin-bottom: 24px;}
+        .consent-box {border: 1px solid #ccc; padding: 16px; margin: 16px 0; background-color: #f9f9f9;}
     </style>
 </head>
 
@@ -23,14 +24,18 @@
     <ul class="language-list">
         <li><a href="#ru_user_agreement">Пользовательское соглашение</a></li>
         <li><a href="#ru_privacy_policy">Политика конфиденциальности</a></li>
+        <li><a href="#ru_pd_consent">Согласие на обработку персональных данных</a></li>
         <li><a href="#en_user_agreement">User Agreement</a></li>
         <li><a href="#en_privacy_policy">Privacy Policy</a></li>
+        <li><a href="#en_pd_consent">Consent to Personal Data Processing</a></li>
     </ul>
 </nav>
 
 
+<!-- ==================== РУССКИЙ ==================== -->
+
 <section id="ru_user_agreement" lang="ru">
-    <h1>Пользовательское соглашение приложения Closely (Версия 1.0)</h1>
+    <h1>Пользовательское соглашение приложения Closely (Версия 2.0)</h1>
     <div class="block">
         <p>Дата вступления в силу: 01.06.2026</p>
         <p>Используя приложение Closely, пользователь подтверждает, что ознакомился и согласен с условиями настоящего Пользовательского соглашения.</p>
@@ -53,6 +58,11 @@
         <h3>2. VIP-функции и платный доступ</h3>
         <p>Некоторые функции приложения могут предоставляться на платной основе в рамках VIP-доступа.</p>
         <p>VIP-доступ предоставляет пользователю ограниченную, неисключительную и отзывную лицензию на использование дополнительного функционала приложения.</p>
+
+        <p><b>Активация VIP-доступа.</b> Для активации VIP-доступа пользователю необходимо указать номер мобильного телефона. Номер телефона используется для идентификации пользователя и привязки статуса VIP к устройству и/или учётной записи. Статус VIP сохраняется в облачной базе данных (Firebase) в виде флага <code>vip = true</code> и используется для предоставления доступа к платному функционалу.</p>
+
+        <p><b>Оплата.</b> Оплата VIP-доступа осуществляется через платёжный сервис ЮKassa. Обработка платежей и связанных с ними данных может осуществляться с использованием инфраструктуры Яндекс Облака. Разработчик не получает и не хранит полные данные банковских карт пользователя — их обработка осуществляется платёжным провайдером в соответствии с его собственными правилами и политикой конфиденциальности.</p>
+
         <p>Разработчик вправе:</p>
         <ul>
             <li>изменять стоимость VIP-доступа</li>
@@ -61,7 +71,7 @@
             <li>изменять, ограничивать или прекращать предоставление отдельных функций</li>
         </ul>
         <p>Покупка VIP-доступа не означает передачу пользователю прав собственности на приложение или его функциональность.</p>
-        <p>Возврат денежных средств осуществляется в соответствии с правилами платформы, через которую была совершена покупка (Google Play, App Store и т.д.).</p>
+        <p>Возврат денежных средств осуществляется в соответствии с правилами платёжного сервиса ЮKassa и применимым законодательством. Для возврата средств пользователю может потребоваться обратиться в поддержку с указанием номера телефона, к которому был привязан VIP-статус.</p>
     </div>
 
     <div class="block">
@@ -118,43 +128,56 @@
 
 
 <section id="ru_privacy_policy" lang="ru">
-    <h1>Политика конфиденциальности приложения Closely (Версия 1.0)</h1>
+    <h1>Политика конфиденциальности приложения Closely (Версия 2.0)</h1>
     <div class="block">
         <p>Дата вступления в силу: 01.06.2026</p>
-        <p>Настоящая Политика конфиденциальности описывает, какие данные может обрабатывать приложение Closely.</p>
+        <p>Настоящая Политика конфиденциальности описывает, какие данные обрабатывает приложение Closely, как они хранятся и кому передаются.</p>
     </div>
 
     <div class="block">
         <h3>1. Какие данные обрабатывает приложение</h3>
-        <p>Приложение может обрабатывать данные, добавляемые пользователем, включая:</p>
+
+        <p><b>Данные гардероба.</b> Приложение обрабатывает данные, добавляемые пользователем, включая:</p>
         <ul>
             <li>фотографии предметов гардероба</li>
             <li>категории и теги</li>
             <li>настройки приложения</li>
         </ul>
-        <p>Данные хранятся локально на устройстве пользователя и не передаются разработчику.</p>
-        <p>Приложение не требует создания учетной записи и не собирает персональные данные пользователя на сервере разработчика.</p>
+        <p>Эти данные хранятся локально на устройстве пользователя и не передаются разработчику.</p>
+
+        <p><b>Данные для VIP-доступа.</b> Для использования VIP-функций приложение обрабатывает номер мобильного телефона пользователя. Номер телефона передаётся и хранится в базе данных Firebase. Он используется исключительно для идентификации пользователя и привязки статуса VIP. Статус VIP хранится в Firebase в виде флага <code>vip = true</code>.</p>
+
+        <p><b>Платёжные данные.</b> Оплата VIP-доступа осуществляется через ЮKassa. Обработка платежей может осуществляться с использованием инфраструктуры Яндекс Облака. Разработчик не получает и не хранит данные банковских карт. Платёжный провайдер обрабатывает платёжные данные в соответствии со своей собственной политикой конфиденциальности.</p>
     </div>
 
     <div class="block">
         <h3>2. Передача данных третьим лицам</h3>
-        <p>Приложение не передает пользовательские данные третьим лицам, за исключением случаев, предусмотренных законодательством.</p>
+        <p>Данные гардероба (фотографии, теги, категории) не передаются третьим лицам.</p>
+        <p>Для обработки VIP-платежей и хранения статуса VIP используются следующие сторонние сервисы:</p>
+        <ul>
+            <li><b>ЮKassa</b> — платёжный сервис, обрабатывающий платежи.</li>
+            <li><b>Яндекс Облако</b> — инфраструктура, используемая для обработки платежей.</li>
+            <li><b>Firebase (Google)</b> — облачная база данных, в которой хранится номер телефона и флаг VIP.</li>
+        </ul>
+        <p>Указанные сервисы обрабатывают данные в соответствии со своими политиками конфиденциальности.</p>
+        <p>Передача данных третьим лицам также может осуществляться в случаях, прямо предусмотренных законодательством.</p>
     </div>
 
     <div class="block">
         <h3>3. Хранение данных</h3>
-        <p>Пользовательские данные хранятся локально на устройстве пользователя.</p>
-        <p>Разработчик не имеет доступа к данным пользователя, если иное не указано в функциональности приложения.</p>
+        <p><b>Данные гардероба</b> хранятся локально на устройстве пользователя. Разработчик не имеет к ним доступа.</p>
+        <p><b>Номер телефона и статус VIP</b> хранятся в Firebase и доступны разработчику для предоставления платного функционала. Срок хранения — до удаления по запросу пользователя или до прекращения работы приложения.</p>
     </div>
 
     <div class="block">
         <h3>4. Удаление приложения и данных</h3>
-        <p>При удалении приложения пользовательские данные, хранящиеся локально, могут быть удалены без возможности восстановления.</p>
+        <p>При удалении приложения локальные данные гардероба удаляются без возможности восстановления.</p>
+        <p>Для удаления номера телефона и статуса VIP из Firebase необходимо обратиться к разработчику по указанному email. После получения запроса данные будут удалены из активных систем и резервных копий в течение 180 дней в соответствии со стандартной практикой Firebase[citation:1][citation:2].</p>
     </div>
 
     <div class="block">
         <h3>5. Безопасность</h3>
-        <p>Разработчик принимает разумные меры для обеспечения безопасности приложения, однако не может гарантировать абсолютную защиту данных на устройстве пользователя.</p>
+        <p>Разработчик принимает разумные меры для обеспечения безопасности приложения. Однако ни один метод передачи данных через интернет и ни один метод электронного хранения не является абсолютно безопасным. Разработчик не может гарантировать абсолютную защиту данных.</p>
     </div>
 
     <div class="block">
@@ -171,9 +194,44 @@
 </section>
 
 
-<section id="en_user_agreement" lang="en">
+<section id="ru_pd_consent" lang="ru">
+    <h1>Согласие на обработку персональных данных</h1>
 
-    <h1>User Agreement for the Closely Application (Version 1.0)</h1>
+    <div class="consent-box">
+        <p><b>Пожалуйста, внимательно ознакомьтесь с настоящим Согласием. Оно является отдельным документом и не входит в состав Пользовательского соглашения.</b></p>
+    </div>
+
+    <div class="block">
+        <p>Настоящим я, как пользователь приложения Closely, даю своё согласие на обработку моих персональных данных на следующих условиях:</p>
+
+        <p><b>1. Оператор персональных данных:</b> Разработчик приложения Closely.</p>
+
+        <p><b>2. Цель обработки:</b> идентификация пользователя для активации и предоставления VIP-доступа к дополнительным функциям приложения, а также для привязки статуса VIP к моему устройству и/или учётной записи.</p>
+
+        <p><b>3. Перечень персональных данных:</b></p>
+        <ul>
+            <li>номер мобильного телефона.</li>
+        </ul>
+
+        <p><b>4. Способы обработки:</b> сбор, запись, систематизация, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передача (предоставление, доступ) с использованием средств автоматизации.</p>
+
+        <p><b>5. Действия с данными:</b> номер телефона передаётся в базу данных Firebase для хранения и привязки статуса VIP. Платёжные данные обрабатываются через ЮKassa и инфраструктуру Яндекс Облака.</p>
+
+        <p><b>6. Срок действия согласия:</b> согласие действует до момента его отзыва пользователем.</p>
+
+        <p><b>7. Порядок отзыва согласия:</b> согласие может быть отозвано путём направления письменного уведомления разработчику по адресу электронной почты, указанному ниже. После отзыва согласия данные будут удалены из активных систем и резервных копий в течение 180 дней.</p>
+
+        <p><b>8. Контактная информация:</b> Email:<b>IrinaAlexandrova87@yandex.ru</b></p>
+
+        <p>Я подтверждаю, что ознакомлен(а) с настоящим Согласием, понимаю его содержание и цель обработки моих персональных данных.</p>
+    </div>
+</section>
+
+
+<!-- ==================== ENGLISH ==================== -->
+
+<section id="en_user_agreement" lang="en">
+    <h1>User Agreement for the Closely Application (Version 2.0)</h1>
     <div class="block">
         <p>Effective date: 01.06.2026</p>
         <p>By using the Closely application, the user confirms that they have read and agreed to the terms of this User Agreement.</p>
@@ -196,6 +254,11 @@
         <h3>2. VIP Features and Paid Access</h3>
         <p>Some application features may be provided on a paid basis as part of VIP access.</p>
         <p>VIP access grants the user a limited, non-exclusive and revocable license to use additional application features.</p>
+
+        <p><b>Activating VIP Access.</b> To activate VIP access, the user must provide a mobile phone number. The phone number is used to identify the user and link the VIP status to the device and/or account. The VIP status is stored in a cloud database (Firebase) as a flag <code>vip = true</code> and is used to provide access to paid functionality.</p>
+
+        <p><b>Payment.</b> Payment for VIP access is processed through the YooKassa payment service. Payment processing and related data may also be handled using Yandex Cloud infrastructure. The developer does not receive or store full bank card details — these are processed by the payment provider in accordance with its own rules and privacy policy.</p>
+
         <p>The developer reserves the right to:</p>
         <ul>
             <li>change VIP pricing</li>
@@ -204,7 +267,7 @@
             <li>modify, restrict or discontinue certain features</li>
         </ul>
         <p>Purchasing VIP access does not transfer ownership rights to the application or its functionality.</p>
-        <p>Refunds are processed according to the rules of the platform through which the purchase was made (Google Play, App Store, etc.).</p>
+        <p>Refunds are processed in accordance with the rules of YooKassa and applicable law. To request a refund, the user may need to contact support and provide the phone number linked to the VIP status.</p>
     </div>
 
     <div class="block">
@@ -261,43 +324,56 @@
 
 
 <section id="en_privacy_policy" lang="en">
-    <h1>Privacy Policy for the Closely Application (Version 1.0)</h1>
+    <h1>Privacy Policy for the Closely Application (Version 2.0)</h1>
     <div class="block">
         <p>Effective date: 01.06.2026</p>
-        <p>This Privacy Policy describes what data the Closely application may process.</p>
+        <p>This Privacy Policy describes what data the Closely application processes, how it is stored, and to whom it is transferred.</p>
     </div>
 
     <div class="block">
         <h3>1. What Data the Application Processes</h3>
-        <p>The application may process data added by the user, including:</p>
+
+        <p><b>Wardrobe Data.</b> The application processes data added by the user, including:</p>
         <ul>
             <li>photos of wardrobe items</li>
             <li>categories and tags</li>
             <li>application settings</li>
         </ul>
-        <p>Data is stored locally on the user's device and is not transferred to the developer.</p>
-        <p>The application does not require account registration and does not collect personal user data on developer servers.</p>
+        <p>This data is stored locally on the user's device and is not transferred to the developer.</p>
+
+        <p><b>VIP Access Data.</b> To use VIP features, the application processes the user's mobile phone number. The phone number is transferred to and stored in a Firebase database. It is used solely for user identification and linking the VIP status. The VIP status is stored in Firebase as a flag <code>vip = true</code>.</p>
+
+        <p><b>Payment Data.</b> Payment for VIP access is processed through YooKassa. Payment processing may also be handled using Yandex Cloud infrastructure. The developer does not receive or store bank card details. The payment provider processes payment data in accordance with its own privacy policy.</p>
     </div>
 
     <div class="block">
         <h3>2. Sharing Data with Third Parties</h3>
-        <p>The application does not share user data with third parties, except where required by law.</p>
+        <p>Wardrobe data (photos, tags, categories) is not shared with third parties.</p>
+        <p>The following third-party services are used for VIP payment processing and VIP status storage:</p>
+        <ul>
+            <li><b>YooKassa</b> — payment service that processes payments.</li>
+            <li><b>Yandex Cloud</b> — infrastructure used for payment processing.</li>
+            <li><b>Firebase (Google)</b> — cloud database where the phone number and VIP flag are stored.</li>
+        </ul>
+        <p>These services process data in accordance with their own privacy policies.</p>
+        <p>Data may also be shared with third parties where required by law.</p>
     </div>
 
     <div class="block">
         <h3>3. Data Storage</h3>
-        <p>User data is stored locally on the user's device.</p>
-        <p>The developer does not have access to user data unless otherwise specified in the application's functionality.</p>
+        <p><b>Wardrobe data</b> is stored locally on the user's device. The developer does not have access to it.</p>
+        <p><b>The phone number and VIP status</b> are stored in Firebase and are accessible to the developer to provide paid functionality. The retention period lasts until deletion upon user request or until the application is discontinued.</p>
     </div>
 
     <div class="block">
         <h3>4. Application and Data Removal</h3>
-        <p>When the application is removed, user data stored locally may also be deleted without the possibility of recovery.</p>
+        <p>When the application is removed, locally stored wardrobe data is deleted without the possibility of recovery.</p>
+        <p>To delete the phone number and VIP status from Firebase, the user must contact the developer at the email provided below. Upon receiving the request, the data will be removed from live and backup systems within 180 days in accordance with standard Firebase practices[citation:1][citation:2].</p>
     </div>
 
     <div class="block">
         <h3>5. Security</h3>
-        <p>The developer takes reasonable measures to ensure application security, but cannot guarantee absolute protection of data stored on the user's device.</p>
+        <p>The developer takes reasonable measures to ensure application security. However, no method of transmission over the internet and no method of electronic storage is completely secure. The developer cannot guarantee absolute data protection.</p>
     </div>
 
     <div class="block">
@@ -312,5 +388,40 @@
         <p>Email:<b>IrinaAlexandrova87@yandex.ru</b></p>
     </div>
 </section>
+
+
+<section id="en_pd_consent" lang="en">
+    <h1>Consent to Personal Data Processing</h1>
+
+    <div class="consent-box">
+        <p><b>Please read this Consent carefully. It is a separate document and is not part of the User Agreement.</b></p>
+    </div>
+
+    <div class="block">
+        <p>I, as a user of the Closely application, hereby give my consent to the processing of my personal data on the following terms:</p>
+
+        <p><b>1. Data Controller:</b> The developer of the Closely application.</p>
+
+        <p><b>2. Purpose of Processing:</b> User identification for activating and providing VIP access to additional application features, and for linking the VIP status to my device and/or account.</p>
+
+        <p><b>3. Categories of Personal Data:</b></p>
+        <ul>
+            <li>mobile phone number.</li>
+        </ul>
+
+        <p><b>4. Methods of Processing:</b> Collection, recording, systematization, accumulation, storage, clarification (updating, modification), extraction, use, transfer (provision, access) using automation tools.</p>
+
+        <p><b>5. Data Actions:</b> The phone number is transferred to a Firebase database for storage and linking the VIP status. Payment data is processed through YooKassa and Yandex Cloud infrastructure.</p>
+
+        <p><b>6. Duration of Consent:</b> This consent is valid until withdrawn by the user.</p>
+
+        <p><b>7. Withdrawal of Consent:</b> Consent may be withdrawn by sending a written notice to the developer at the email address provided below. After withdrawal, the data will be deleted from live and backup systems within 180 days.</p>
+
+        <p><b>8. Contact Information:</b> Email:<b>IrinaAlexandrova87@yandex.ru</b></p>
+
+        <p>I confirm that I have read this Consent, understand its content, and understand the purpose of processing my personal data.</p>
+    </div>
+</section>
+
 </body>
 </html>
