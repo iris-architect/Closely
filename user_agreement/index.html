@@ -54,25 +54,35 @@
         </ul>
     </div>
 
-    <div class="block">
-        <h3>2. VIP-функции и платный доступ</h3>
-        <p>Некоторые функции приложения могут предоставляться на платной основе в рамках VIP-доступа.</p>
-        <p>VIP-доступ предоставляет пользователю ограниченную, неисключительную и отзывную лицензию на использование дополнительного функционала приложения.</p>
+<div class="block">
+    <h3>2. VIP-функции и платный доступ</h3>
+    <p>Некоторые функции приложения могут предоставляться на платной основе в рамках VIP-доступа.</p>
+    <p>VIP-доступ предоставляет пользователю ограниченную, неисключительную и отзывную лицензию на использование дополнительного функционала приложения.</p>
 
-        <p><b>Активация VIP-доступа.</b> Для активации VIP-доступа пользователю необходимо указать номер мобильного телефона. Номер телефона используется для идентификации пользователя и привязки статуса VIP к устройству и/или учётной записи. Статус VIP сохраняется в облачной базе данных (Firebase) в виде флага <code>vip = true</code> и используется для предоставления доступа к платному функционалу.</p>
+    <p><b>Активация VIP-доступа.</b> Для активации VIP-доступа пользователю необходимо указать номер мобильного телефона. Номер телефона используется для идентификации пользователя и привязки статуса VIP к устройству и/или учётной записи. Статус VIP сохраняется в облачной базе данных (Firebase) в виде флага <code>isVip = true</code> и используется для предоставления доступа к платному функционалу.</p>
 
-        <p><b>Оплата.</b> Оплата VIP-доступа осуществляется через платёжный сервис ЮKassa. Обработка платежей и связанных с ними данных может осуществляться с использованием инфраструктуры Яндекс Облака. Разработчик не получает и не хранит полные данные банковских карт пользователя — их обработка осуществляется платёжным провайдером в соответствии с его собственными правилами и политикой конфиденциальности.</p>
+    <p><b>Оплата.</b> Оплата VIP-доступа осуществляется через платёжный сервис ЮKassa. Обработка платежей и связанных с ними данных может осуществляться с использованием инфраструктуры Яндекс Облака. Разработчик не получает и не хранит полные данные банковских карт пользователя — их обработка осуществляется платёжным провайдером в соответствии с его собственными правилами и политикой конфиденциальности.</p>
 
-        <p>Разработчик вправе:</p>
-        <ul>
-            <li>изменять стоимость VIP-доступа</li>
-            <li>изменять перечень VIP-функций</li>
-            <li>изменять ограничения бесплатной версии</li>
-            <li>изменять, ограничивать или прекращать предоставление отдельных функций</li>
-        </ul>
-        <p>Покупка VIP-доступа не означает передачу пользователю прав собственности на приложение или его функциональность.</p>
-        <p>Возврат денежных средств осуществляется в соответствии с правилами платёжного сервиса ЮKassa и применимым законодательством. Для возврата средств пользователю может потребоваться обратиться в поддержку с указанием номера телефона, к которому был привязан VIP-статус.</p>
-    </div>
+    <p>Разработчик вправе:</p>
+    <ul>
+        <li>изменять стоимость VIP-доступа</li>
+        <li>изменять перечень VIP-функций</li>
+        <li>изменять ограничения бесплатной версии</li>
+        <li>изменять, ограничивать или прекращать предоставление отдельных функций</li>
+    </ul>
+    <p>Покупка VIP-доступа не означает передачу пользователю прав собственности на приложение или его функциональность.</p>
+    <p>Возврат денежных средств осуществляется в соответствии с правилами платёжного сервиса ЮKassa и применимым законодательством. Для возврата средств пользователю может потребоваться обратиться в поддержку с указанием номера телефона, к которому был привязан VIP-статус.</p>
+
+    <p><b>Ограничение ответственности и технические сбои.</b> Приложение и VIP-функции предоставляются на условиях «как есть» (as is). Разработчик делает всё возможное для обеспечения стабильной работы сервисов, однако не несёт ответственности за временные технические сбои, задержки или ошибки, возникшие на стороне хостинг-провайдеров, платформы Firebase, Яндекс Облака или платёжного шлюза ЮKassa.</p>
+    
+    <p><b>Порядок разрешения проблем и претензий (Досудебный порядок).</b> В случае, если пользователь успешно произвёл оплату, но VIP-статус не активировался в приложении автоматически из-за технического сбоя, Пользователь обязуется соблюдать обязательный досудебный порядок разрешения споров:</p>
+    <ul>
+        <li>Пользователь направляет обращение в службу технической поддержки Разработчика по адресу электронной почты: <strong>IrinaAlexandrova87@yandex.ru</strong>.</li>
+        <li>В обращении необходимо указать номер телефона, введённый при оплате, и прикрепить чек (квитанцию) об успешном списании средств, полученную от ЮKassa.</li>
+        <li>Разработчик обязуется рассмотреть обращение в течение 10 рабочих дней с момента получения и при подтверждении факта оплаты <strong>активировать VIP-статус в базе данных вручную</strong> либо осуществить полный возврат денежных средств.</li>
+    </ul>
+</div>
+
 
     <div class="block">
         <h3>3. Ответственность пользователя</h3>
@@ -254,11 +264,11 @@
         <h3>2. VIP Features and Paid Access</h3>
         <p>Some application features may be provided on a paid basis as part of VIP access.</p>
         <p>VIP access grants the user a limited, non-exclusive and revocable license to use additional application features.</p>
-
-        <p><b>Activating VIP Access.</b> To activate VIP access, the user must provide a mobile phone number. The phone number is used to identify the user and link the VIP status to the device and/or account. The VIP status is stored in a cloud database (Firebase) as a flag <code>vip = true</code> and is used to provide access to paid functionality.</p>
-
+    
+        <p><b>Activating VIP Access.</b> To activate VIP access, the user must provide a mobile phone number. The phone number is used to identify the user and link the VIP status to the device and/or account. The VIP status is stored in a cloud database (Firebase) as a flag <code>isVip = true</code> and is used to provide access to paid functionality.</p>
+    
         <p><b>Payment.</b> Payment for VIP access is processed through the YooKassa payment service. Payment processing and related data may also be handled using Yandex Cloud infrastructure. The developer does not receive or store full bank card details — these are processed by the payment provider in accordance with its own rules and privacy policy.</p>
-
+    
         <p>The developer reserves the right to:</p>
         <ul>
             <li>change VIP pricing</li>
@@ -268,7 +278,17 @@
         </ul>
         <p>Purchasing VIP access does not transfer ownership rights to the application or its functionality.</p>
         <p>Refunds are processed in accordance with the rules of YooKassa and applicable law. To request a refund, the user may need to contact support and provide the phone number linked to the VIP status.</p>
+    
+        <p><b>Limitation of Liability and Technical Failures.</b> The application and VIP features are provided on an "as is" basis. The developer makes every effort to ensure the stable operation of all services, but shall not be held liable for any temporary technical failures, delays, or errors occurring on the side of hosting providers, the Firebase platform, Yandex Cloud, or the YooKassa payment gateway.</p>
+        
+        <p><b>Dispute Resolution and Dispute Procedure (Pre-trial Dispute Resolution).</b> In the event that a user has successfully completed a payment, but the VIP status was not automatically activated due to a technical failure, the User agrees to follow the mandatory pre-trial dispute resolution procedure:</p>
+        <ul>
+            <li>The User must send an inquiry to the Developer's technical support service via email at: <strong>IrinaAlexandrova87@yandex.ru</strong>.</li>
+            <li>The inquiry must specify the mobile phone number provided during payment and include a receipt (payment confirmation) received from YooKassa.</li>
+            <li>The Developer agrees to review the inquiry within 10 business days from the date of receipt. Upon confirming the payment fact, the Developer will <strong>manually activate the VIP status in the cloud database</strong> or issue a full refund.</li>
+        </ul>
     </div>
+
 
     <div class="block">
         <h3>3. User Responsibility</h3>
